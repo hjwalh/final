@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <h1>Image Gallery</h1>
+    <div class="category-buttons">
+      <button class="category-btn" data-category="all">All</button>
+      <button class="category-btn" data-category="car">Cars</button>
+      <button class="category-btn" data-category="wildlife">Wildlife</button>
+      <button class="category-btn" data-category="nature">Nature</button>
+    </div>
+  </nav>
+
+  <!-- Gallery Container -->
+  <div id="imageGallery" class="gallery-container"></div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <img id="lightboxImg" class="lightbox-img">
+    <span class="close">&times;</span>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
