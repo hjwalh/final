@@ -1,0 +1,128 @@
+body {
+    background: #0F2027;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+/* Enhanced Navbar Styling */
+.navbar {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px; /* Rounded corners */
+    margin-bottom: 20px; /* Add space below navbar */
+}
+
+.navbar h1 {
+    font-size: 24px;
+    margin: 0;
+    color: #fff; /* White color for the title */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Title shadow */
+}
+
+.category-buttons button {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 20px; /* Pill-shaped buttons */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.category-buttons button:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+#imageGallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.gallery-item {
+    width: calc(33.33% - 20px);
+    margin: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Slightly transparent background */
+    backdrop-filter: blur(10px); /* More blur */
+    overflow: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Hidden by default */
+}
+
+.lightbox.active {
+    display: flex;
+    opacity: 1; /* Fade in */
+}
+
+.lightbox-img {
+    max-width: 90vw; /* Increased max width */
+    max-height: 90vh; /* Increased max height */
+    width: auto;
+    height: auto;
+    border-radius: 12px; /* More rounded corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* Stronger shadow */
+    object-fit: contain;
+    animation: fadeIn 0.5s ease; /* Add fade-in animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.close {
+    position: absolute;
+    top: 20px; /* Adjusted position */
+    right: 30px; /* Adjusted position */
+    font-size: 40px; /* Larger size */
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+.close:hover {
+    color: red; /* More noticeable hover color */
+}
